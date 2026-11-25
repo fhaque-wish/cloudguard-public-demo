@@ -4,6 +4,8 @@ Before an AI agent changes cloud infrastructure, can an independent security rev
 
 The current experiment tests how language models make that judgment. Each model reviews the same proposed change twice. In one version, the relevant relationships are stated together. In the other, the model must connect evidence across records. Both versions preserve the same facts and any deliberate gaps. The longer-term goal is to build and evaluate a security reviewer that an infrastructure orchestration agent can consult before acting, and that can explain which evidence supports its decision or what information is still needed.
 
+The [CloudGuard implementation and development repository](https://github.com/fhaque-wish/cloud-change-guard) is private. Please contact me through LinkedIn to discuss access.
+
 ## Proposed architecture
 
 CloudGuard is envisioned as a security specialist consulted by a core infrastructure orchestration agent. A request, incident, or operational event can initiate a change. The orchestrator coordinates planning, specialist reviews, execution, and follow-up. It can call tools directly and consult planning, reliability, compliance, or deployment agents as appropriate.
