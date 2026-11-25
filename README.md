@@ -32,7 +32,7 @@ This diagram describes a proposed production workflow. The current experiment us
 
 Each scenario family starts with an infrastructure change and an operational objective. We identify the applicable security policy, assessment point, resources, identities, and evidence needed to determine whether the change is allowed. We then create controlled variations and record a reference decision and rationale for each. The reference is reserved for evaluation.
 
-The current benchmark contains **10 families and 44 variants**. AuditBridge illustrates the four variant types.
+The current benchmark contains **10 families and 44 variants**. The AuditBridge scenario family illustrates the four variant types.
 
 | Variant type | What it tests | AuditBridge example | Reference |
 |---|---|---|---|
@@ -86,17 +86,6 @@ In the explicit context, both models identified the missing destination SCP info
 - **Evaluate frontier models** on the same variants and presentations, examining prohibited approvals, false blocks, and missing-evidence cases.
 - **Develop an experimental CloudGuard agent** using open-weight models and scoped tools to query realistic cloud configuration, policies, logs, and runtime data.
 - **Build a broader security framework for AI-orchestrated cloud infrastructure**, using the benchmark and testbed findings to assess proposed actions against policy, effective permissions, and infrastructure state, with traceable authorization, prevention, and human escalation.
-- Repeat selected trials, extend rationale review, and investigate Qwen and GPT-OSS Safeguard execution failures separately.
-
-## Preparing a results report
-
-The reporting script reads one model's CloudGuard JSONL trial files and produces a local JSON report with context labels, run timestamps when available, decisions, rationales, errors, and aggregate accuracy.
-
-```powershell
-python .\prepare_results.py --input-dir "C:\path\to\cloudguard\results\run-folder" --output ".\results\run.json"
-```
-
-The output path must be new. Review the report before sharing it, since source records may include information intended for private research.
 
 ## Collaboration and funding
 
